@@ -6,6 +6,8 @@ public class Programa1 {
 		System.out.println("1ºDAW");
 		System.out.println("Esto es una prueba de sincronización");
 		System.out.println("Esto es otro cambio");
+		System.out.println("Ooooootro cambio");
+
 	}
 
 }
