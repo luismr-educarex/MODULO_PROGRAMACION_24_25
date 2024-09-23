@@ -7,6 +7,7 @@ public class Programa2 {
 
         byte numero = 100;
         byte numero2 = 127;
+        int numero3 = 12000;
 
         System.out.println(numero);
         System.out.println(numero2);
