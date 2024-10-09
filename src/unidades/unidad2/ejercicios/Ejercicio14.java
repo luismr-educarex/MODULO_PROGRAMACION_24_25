@@ -7,6 +7,7 @@ public class Ejercicio14 {
 		int N = 10;
 		double A = 3.5;
 		char C = '2';
+		byte B = 7;
 
 		double suma;
 		double diferencia;
@@ -21,8 +22,9 @@ public class Ejercicio14 {
 		diferencia = A-N;
 		System.out.println("\nDiferencia de A-N:"+diferencia);
 		
-		System.out.printf("Valor numérico de C:%d",(int)C);
+		System.out.printf("Valor numérico de C:%d\n",(int)C);
 		
+		System.out.println(B);
 		
 	}
 
