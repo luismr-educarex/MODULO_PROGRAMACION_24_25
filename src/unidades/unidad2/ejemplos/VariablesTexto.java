@@ -12,7 +12,7 @@ public class VariablesTexto {
 		char t = 's';
 		char o = 'a';
 		int numero = 35;
-		String nombre = "Pepe";
+		String nombre = "Juan";
 		char grupo = 'C';
 	
 		System.out.println("Imprime un salto de línea");
