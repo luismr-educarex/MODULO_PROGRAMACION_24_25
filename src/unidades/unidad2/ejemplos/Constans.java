@@ -1,6 +1,6 @@
 package unidades.unidad2.ejemplos;
 
-public class Constantes {
+public class Constans {
 	
 	static final double IRPF = 0.21;
 	static final double IVA = 0.17;
