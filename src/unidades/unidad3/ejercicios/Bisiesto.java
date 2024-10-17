@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Bisiesto {
 
 	public static void main(String[] args) {
-		
+
+		System.out.println("------- Programa para saber si un número es bisiesto o no -------");
 		Scanner entrada = new Scanner(System.in);
 		int anio;
 		
