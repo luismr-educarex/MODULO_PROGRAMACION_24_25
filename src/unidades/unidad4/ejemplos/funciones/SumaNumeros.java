@@ -3,33 +3,56 @@ import java.util.Scanner;
 
 public class SumaNumeros {
 
+	static final int NUM_VECES = 3;
+	static  Scanner scanner;
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        // Primer intento
-        System.out.print("Intento 1 - Ingresa el primer número: ");
-        int num1 = scanner.nextInt();
-        System.out.print("Intento 1 - Ingresa el segundo número: ");
-        int num2 = scanner.nextInt();
-        int suma1 = num1 + num2;
-        System.out.println("La suma es: " + suma1);
-        
-        // Segundo intento
-        System.out.print("Intento 2 - Ingresa el primer número: ");
-        int num3 = scanner.nextInt();
-        System.out.print("Intento 2 - Ingresa el segundo número: ");
-        int num4 = scanner.nextInt();
-        int suma2 = num3 + num4;
-        System.out.println("La suma es: " + suma2);
-        
-        // Tercer intento
-        System.out.print("Intento 3 - Ingresa el primer número: ");
-        int num5 = scanner.nextInt();
-        System.out.print("Intento 3 - Ingresa el segundo número: ");
-        int num6 = scanner.nextInt();
-        int suma3 = num5 + num6;
-        System.out.println("La suma es: " + suma3);
-        
+   
+		 scanner = new Scanner(System.in);
+    	realizarSumas();
+          
         scanner.close();
     }
+    
+    static void realizarSumas() {
+		
+    	for(int i=1;i<=NUM_VECES;i++) {
+        	mostrarMensaje("Intento "+i+" - Ingresa el primer número: ");
+            int num1 = leerEntero(scanner);
+            mostrarMensaje("Intento "+i+" - Ingresa el segundo número: ");
+            int num2 = leerEntero(scanner);  
+            int suma1 = sumarEnteros(num1, num2);
+            mostrarMensaje("La suma es: " + suma1);
+            
+            mostrarMensaje("La suma es: " + sumarEnteros(num1, num2));
+        }
+		
+	}
+
+	static int sumarEnteros(int sumando1,int sumando2)
+    {
+    	int suma = sumando1 + sumando2;
+    	return suma;	
+    }
+    
+    static int leerEntero(Scanner entrada) {
+    
+    	int numero=entrada.nextInt();
+    
+    	return numero;
+    }
+    
+    static void mostrarMensaje(String mensaje) {
+    	System.out.print("______________________\n");
+    	System.out.println(mensaje);
+    	System.out.print("......................\n");
+    }
+    
+
+    
+    
+    
+    
+    
+    
+    
 }
