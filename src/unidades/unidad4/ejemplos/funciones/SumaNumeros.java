@@ -3,13 +3,15 @@ import java.util.Scanner;
 
 public class SumaNumeros {
 
+	// variables globales
 	static final int NUM_VECES = 3;
 	static  Scanner scanner;
-    public static void main(String[] args) {
    
-		 scanner = new Scanner(System.in);
-    	realizarSumas();
-          
+	
+	public static void main(String[] args) {
+   
+		scanner = new Scanner(System.in);
+    	realizarSumas();  
         scanner.close();
     }
     
@@ -20,8 +22,10 @@ public class SumaNumeros {
             int num1 = leerEntero(scanner);
             mostrarMensaje("Intento "+i+" - Ingresa el segundo número: ");
             int num2 = leerEntero(scanner);  
-            int suma1 = sumarEnteros(num1, num2);
-            mostrarMensaje("La suma es: " + suma1);
+           
+            int suma = sumarEnteros(num1, num2);
+            
+            mostrarMensaje("La suma es: " + suma);
             
             mostrarMensaje("La suma es: " + sumarEnteros(num1, num2));
         }
@@ -47,12 +51,6 @@ public class SumaNumeros {
     	System.out.print("......................\n");
     }
     
-
-    
-    
-    
-    
-    
-    
+  
     
 }
