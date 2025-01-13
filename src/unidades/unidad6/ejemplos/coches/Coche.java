@@ -9,7 +9,7 @@ public class Coche {
 	private String color;
 	private Motor motor;
 	private double velocidad;
-	private Revision[] revisones;
+	private Revision[] revisiones;
 	
 	
 	public Coche(String marca,String modelo,int matriculacion) {
@@ -71,10 +71,10 @@ public class Coche {
 	}
 	
 	public Revision[] getRevisones() {
-		return revisones;
+		return revisiones;
 	}
 	public void setRevisones(Revision[] revisones) {
-		this.revisones = revisones;
+		this.revisiones = revisones;
 	}
 	
 	
@@ -133,15 +133,69 @@ public class Coche {
 		datos += "\nVelocidad:"+velocidad;
 		datos += "\n"+motor.toString();
 		datos += "\nRevisiones________";
-		for(int i=0;i<revisones.length;i++) {
-			if(revisones[i]!=null) {
-				datos+="\n"+revisones[i].toString();
+		for(int i=0;i<revisiones.length;i++) {
+			if(revisiones[i]!=null) {
+				datos+="\n"+revisiones[i].toString();
 			}
 		}
 		datos += "\n----------------------";
 		
 		return datos;
 	}
+	
+	public void addRevision(Revision revision) {
+		
+		 int posicion = obtenerPosionLibre();
+		 
+		 if(posicion!=-1) { // hay una posición libre
+			 revisiones[posicion]=revision;
+		 }else {
+			 System.out.println("Ha superado el límite de revisiones");
+		 }
+		 
+	}
+	
+	private int obtenerPosionLibre() {
+		int posicion= -1;
+		for(int i=0;posicion==-1 && i<revisiones.length;i++) {
+			if(revisiones[i]==null) {
+				posicion=i;
+			}
+		}
+		return posicion;
+	}
+	
+	public Revision obtenerRevisionPorId(int idRevision) {
+		
+		Revision revision = null;
+		for(int i=0;revision==null && i<revisiones.length;i++) {
+			if(revisiones[i]!=null) {
+				if(revisiones[i].getId()==idRevision) { // Se ha encontrado la revisión
+					revision = revisiones[i];
+				}
+			}
+		}
+		return revision;
+	}
+	
+	public Revision obtenerRevisionPorId2(int idRevision) {
+		
+		boolean encontrado=false;
+		Revision revision = null;
+		
+		int i=0;
+		while(!encontrado || i<revisiones.length) {
+			if(revisiones[i]!=null) {
+				if(revisiones[i].getId()==idRevision) {
+					revision=revisiones[i];
+					encontrado=true;
+				}
+			}
+		}
+	
+		return revision;
+	}
+
 
 	
 

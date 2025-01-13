@@ -20,11 +20,22 @@ public class Taller {
 		
 		coche1.setRevisones(revisiones);
 		
-		Revision revision4 = new Revision(4, 1, 2025, "Frenos y pastillas", 'M', 1200);
+		System.out.println(coche1);
 		
+		Revision revision4 = new Revision(4, 1, 2025, "Frenos y pastillas", 'M', 1200);
+
+		coche1.addRevision(revision4);
 		
 		System.out.println(coche1);
 		
+		Revision revision = coche1.obtenerRevisionPorId(3);
+		
+		if(revision!=null) {
+			System.out.println("Coste de la revisión:"+revision.getCosteRevision());
+
+		}else{
+			System.out.println("No se ha encontrado una revisión con ese id");
+		}
 		
 		
 		
