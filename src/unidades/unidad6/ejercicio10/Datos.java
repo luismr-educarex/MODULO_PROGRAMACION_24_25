@@ -14,5 +14,16 @@ public class Datos {
 	public static final double BONIFICACION_T_PARCIAL=0.1;
 	
 	public static final String CARGO_1="Gerente";
+	public static final String CARGO_2="Jefe";
 
 }
+
+
+
+
+
+
+
+
+
+

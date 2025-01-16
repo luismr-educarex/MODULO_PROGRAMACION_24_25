@@ -36,17 +36,33 @@ public class Empresa {
 				  "Flores Paredes", 
 				   40, "Gerente", Datos.PRECIO_HORA_OPERARIO, 
 				   "Competo", Datos.BONIFICACION_T_PARCIAL);
+		
+		Empleado empleado7 = new Empleado("Eduardo", 
+				  "Flores Paredes", 
+				   40, "Gerenta", Datos.PRECIO_HORA_OPERARIO, 
+				   "Competo", Datos.BONIFICACION_T_PARCIAL);
+		
+		
+		
+		if(empleado6.equals(empleado7)) {
+			System.out.println("Son iguales");
+		}else {
+			System.out.println("No son iguales");
+		}
+
+		System.out.println(empleado6.hashCode());
+		System.out.println(empleado7.hashCode());
 
 		
-		System.out.println(empleado1);
-	
-		empleado1.setHoras(42);
-
-		System.out.println(empleado2);
-		System.out.println(empleado3);
-		System.out.println(empleado4);
-		System.out.println(empleado5);
-		System.out.println(empleado6);
+		/*
+		 * System.out.println(empleado1);
+		 * 
+		 * empleado1.setHoras(42);
+		 * 
+		 * System.out.println(empleado2); System.out.println(empleado3);
+		 * System.out.println(empleado4); System.out.println(empleado5);
+		 * System.out.println(empleado6);
+		 */
 		
 		
 		

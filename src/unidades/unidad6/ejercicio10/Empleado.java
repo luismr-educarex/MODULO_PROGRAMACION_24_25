@@ -1,5 +1,7 @@
 package unidades.unidad6.ejercicio10;
 
+import java.util.Objects;
+
 public class Empleado {
 	
 	private int id;
@@ -121,6 +123,47 @@ public class Empleado {
 				+ ", pago_por_horas=" + pago_por_horas + ",\n modalidad=" + modalidad + ", bonificacion=" + bonificacion
 				+ "]\n\n";
 	}
+	
+	
+	public boolean sonIguales(Empleado empleado) {
+		
+		boolean sonIguales = false;
+		if(nombre.equals(empleado.getNombre())
+		   && apellidos.equals(empleado.getApellidos())
+		   && cargo.equals(empleado.getCargo())
+				) {
+			sonIguales=true;
+		}
+		
+		return sonIguales;
+		
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(apellidos, cargo, nombre);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Empleado other = (Empleado) obj;
+		return Objects.equals(apellidos, other.apellidos) && Objects.equals(cargo, other.cargo)
+				&& Objects.equals(nombre, other.nombre);
+	}
+
+	
+
+
+	
+	
+	
+	
 	
 	
 	
