@@ -1,4 +1,4 @@
-package unidades.unidad6.ejercicios.piezasproveedores;
+package unidades.unidad6.ejercicios.piezasproveedoresV2;
 
 public class MainConDatos {
 	
@@ -9,7 +9,7 @@ public class MainConDatos {
 		
 		Pieza piezas[];
 		Proveedor proveedores[];
-		Suministro2 suministros[];
+		Suministro suministros[];
 		
 		//Simulamos la carga de datos de las tablas
 		piezas = datos.piezas; //SELECT * FROM PIEZAS
@@ -34,7 +34,7 @@ public class MainConDatos {
 		}
 		
 		System.out.println("---SUMINISTROS ---");
-		for(Suministro2 suminitro:suministros) {
+		for(Suministro suminitro:suministros) {
 			if(suminitro!=null) {
 				System.out.println(suminitro);
 			}

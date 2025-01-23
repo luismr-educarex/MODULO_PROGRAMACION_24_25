@@ -1,13 +1,13 @@
-package unidades.unidad6.ejercicios.piezasproveedores;
+package unidades.unidad6.ejercicios.piezasproveedoresV2;
 
-public class Suministro2{
+public class Suministro{
 
 	private Pieza pieza;
 	private Proveedor proveedor;
 	private int cantidad;
 	private double precio;
 
-	public Suministro2(Pieza pieza, Proveedor proveedor, int cantidad, double precio) {
+	public Suministro(Pieza pieza, Proveedor proveedor, int cantidad, double precio) {
 		this.pieza = pieza;
 		this.proveedor = proveedor;
 		this.cantidad = cantidad;

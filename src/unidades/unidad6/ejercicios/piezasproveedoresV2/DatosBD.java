@@ -1,4 +1,4 @@
-package unidades.unidad6.ejercicios.piezasproveedores;
+package unidades.unidad6.ejercicios.piezasproveedoresV2;
 
 import java.util.Random;
 
@@ -10,7 +10,7 @@ class DatosBD {
 	public static final int CANTIDAD_MAXIMA_SUMINISTRO = 100;
     public Pieza[] piezas = new Pieza[NUM_PIEZAS];
     public Proveedor[] proveedores = new Proveedor[NUM_PROVEEDORES];
-    public Suministro2[] suministros = new Suministro2[NUM_SUMINISTROS];
+    public Suministro[] suministros = new Suministro[NUM_SUMINISTROS];
  
 
     public DatosBD() {
@@ -46,7 +46,7 @@ class DatosBD {
         	int cantidad = CANTIDAD_MINIMA_SUMINISTRO + random.nextInt(CANTIDAD_MAXIMA_SUMINISTRO+1); // Número entre el 10 y 100
         	double precio = 0.50 + (random.nextDouble()*9.50);
         	precio = Math.round(precio*100)/100;
-        	suministros[i] =  new Suministro2(pieza, proveedor, cantidad, precio);
+        	suministros[i] =  new Suministro(pieza, proveedor, cantidad, precio);
         }
         
         
@@ -62,7 +62,7 @@ class DatosBD {
 		return proveedores;
 	}
 
-	public Suministro2[] getSuministros() {
+	public Suministro[] getSuministros() {
 		return suministros;
 	}
     
