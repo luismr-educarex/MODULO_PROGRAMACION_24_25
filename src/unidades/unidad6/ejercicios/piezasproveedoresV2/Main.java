@@ -1,6 +1,6 @@
 package unidades.unidad6.ejercicios.piezasproveedoresV2;
 
-public class MainConDatos {
+public class Main {
 	
 	public static void main(String[] args) {
 		
