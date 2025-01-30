@@ -6,6 +6,9 @@ public class CadenaConStringBuffer {
 		
 		String ciclo = "Desarrollo de aplicaciones";
 		ciclo = ciclo + " web";
+		
+	
+		
 	
 		StringBuffer sbf = new StringBuffer();
 		sbf.append("Desarrollo aplicaciones en");
