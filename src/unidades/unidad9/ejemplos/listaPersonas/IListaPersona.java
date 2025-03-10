@@ -1,8 +1,6 @@
-package unidades.unidad9.ejemplos;
+package unidades.unidad9.ejemplos.listaPersonas;
 
-import java.time.LocalDate;
-
-public interface ILista {
+public interface IListaPersona {
 	
 	public void add(Persona persona);
 	public void delete(Persona persona);

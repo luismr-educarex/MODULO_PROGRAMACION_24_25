@@ -1,4 +1,4 @@
-package unidades.unidad9.ejemplos;
+package unidades.unidad9.ejemplos.listaPersonas;
 
 import java.time.LocalDate;
 

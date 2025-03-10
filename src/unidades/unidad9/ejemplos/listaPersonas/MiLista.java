@@ -1,8 +1,8 @@
-package unidades.unidad9.ejemplos;
+package unidades.unidad9.ejemplos.listaPersonas;
 
 import java.time.LocalDate;
 
-public class MiLista implements ILista{
+public class MiLista implements IListaPersona{
 	
 	private int numElementos=0;
 	private Nodo inicio=null;

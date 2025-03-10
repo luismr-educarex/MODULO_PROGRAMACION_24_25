@@ -1,10 +1,10 @@
-package unidades.unidad9.ejemplos;
+package unidades.unidad9.ejemplos.listaPersonas;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		ILista listaPersonas = new MiLista();
+		IListaPersona listaPersonas = new MiLista();
 		
 		Persona persona1 = new Persona(1, "Amparo");
 		Persona persona2 = new Persona(12, "Tomás");
