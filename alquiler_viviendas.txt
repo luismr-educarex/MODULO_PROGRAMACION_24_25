@@ -1,0 +1,20 @@
+Juan Pérez;Calle Mayor 10, Madrid;Piso;750;12 meses
+Ana López;Avenida Andalucía 25, Sevilla;Chalet;1200;24 meses
+Carlos Ruiz;Plaza Cataluña 3, Barcelona;Apartamento;600;6 meses
+María Fernández;Calle Serrano 15, Madrid;Piso;950;18 meses
+Pedro Sánchez;Calle del Prado 8, Valencia;Dúplex;1100;12 meses
+Javier Gómez;Calle Larios 45, Málaga;Estudio;500;6 meses
+Sonia Martínez;Avenida de la Constitución 12, Sevilla;Chalet;1500;36 meses
+Luis Ramírez;Gran Vía 20, Bilbao;Loft;700;12 meses
+Elena Torres;Calle San Fernando 6, Alicante;Piso;850;24 meses
+Fernando Díaz;Avenida Diagonal 100, Barcelona;Dúplex;1300;24 meses
+Marta Gómez;Calle Fuego 23, Madrid;Piso;900;12 meses
+Carlos López;Paseo Marítimo 45, Málaga;Apartamento;650;6 meses
+Andrea Ruiz;Calle Norte 7, Sevilla;Chalet;1800;36 meses
+Jorge Fernández;Calle Esperanza 15, Valencia;Loft;750;12 meses
+Laura Sánchez;Avenida Central 33, Bilbao;Dúplex;1400;24 meses
+Manuel Díaz;Plaza de España 4, Barcelona;Estudio;550;6 meses
+Rosa Martínez;Calle Sur 11, Madrid;Piso;1000;18 meses
+Alberto Ramírez;Avenida Sol 22, Sevilla;Apartamento;700;12 meses
+Paula Torres;Calle Estrella 8, Valencia;Dúplex;1150;24 meses
+Gabriel Romero;Calle Luna 14, Bilbao;Loft;800;12 meses

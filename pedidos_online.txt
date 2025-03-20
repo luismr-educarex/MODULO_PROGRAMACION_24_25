@@ -1,0 +1,20 @@
+101;Juan Pérez;Ordenador portátil;1;899.99;Enviado
+102;Ana López;Teléfono móvil;2;599.99;Pendiente
+103;Carlos Ruiz;Auriculares inalámbricos;1;129.99;Entregado
+104;María Fernández;Monitor 27 pulgadas;1;299.99;Enviado
+105;Pedro Sánchez;Teclado mecánico;1;89.99;Cancelado
+106;Javier Gómez;Ratón gaming;2;49.99;Pendiente
+107;Sonia Martínez;Impresora multifunción;1;199.99;Enviado
+108;Luis Ramírez;Tablet 10 pulgadas;1;329.99;Entregado
+109;Elena Torres;Cámara réflex;1;699.99;Enviado
+110;Fernando Díaz;Smartwatch deportivo;1;179.99;Pendiente
+111;Marta Gómez;Altavoz Bluetooth;1;59.99;Entregado
+112;Carlos López;Tarjeta gráfica;1;499.99;Enviado
+113;Andrea Ruiz;Disco duro externo;2;89.99;Pendiente
+114;Jorge Fernández;Silla ergonómica;1;199.99;Enviado
+115;Laura Sánchez;Consola de videojuegos;1;399.99;Cancelado
+116;Manuel Díaz;Micrófono profesional;1;149.99;Pendiente
+117;Rosa Martínez;Lámpara LED de escritorio;1;29.99;Entregado
+118;Alberto Ramírez;Router WiFi 6;1;149.99;Enviado
+119;Paula Torres;Mochila para portátil;1;39.99;Pendiente
+120;Gabriel Romero;Cargador inalámbrico;1;25.99;Entregado

@@ -1,0 +1,20 @@
+12345;Juan Pérez;Madrid;Nueva York;Business
+67890;Ana López;Barcelona;París;Turista
+11223;Carlos Ruiz;Sevilla;Londres;Premium
+44556;María Fernández;Valencia;Roma;Turista
+77889;Pedro Sánchez;Bilbao;Berlín;Business
+99001;Javier Gómez;Madrid;Tokio;Premium
+22334;Sonia Martínez;Barcelona;Lisboa;Turista
+55667;Luis Ramírez;Sevilla;Buenos Aires;Business
+88900;Elena Torres;Madrid;Miami;Turista
+33211;Fernando Díaz;Valencia;Ámsterdam;Premium
+45321;Marta Gómez;Madrid;Sídney;Business
+67902;Carlos López;Barcelona;Moscú;Turista
+11523;Andrea Ruiz;Sevilla;Atenas;Premium
+44658;Jorge Fernández;Valencia;Oslo;Turista
+77589;Laura Sánchez;Bilbao;Copenhague;Business
+99123;Manuel Díaz;Madrid;Toronto;Premium
+22459;Rosa Martínez;Barcelona;Bruselas;Turista
+55767;Alberto Ramírez;Sevilla;Dublín;Business
+88344;Paula Torres;Madrid;Estambul;Turista
+33462;Gabriel Romero;Valencia;El Cairo;Premium
