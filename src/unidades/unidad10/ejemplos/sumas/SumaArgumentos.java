@@ -1,4 +1,4 @@
-package unidades.unidad9.ejemplos.errores;
+package unidades.unidad10.ejemplos.sumas;
 
 public class SumaArgumentos {
 
