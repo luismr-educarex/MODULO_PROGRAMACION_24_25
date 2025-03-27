@@ -5,15 +5,15 @@
   "conocimientos": ["Java", "PHP", "MySql"]
 },
 {
-  "nombre": "Juan Pérez",
-  "edad": 30,
+  "nombre": "Tomás García",
+  "edad": 32,
   "ciudad": "Madrid",
-  "conocimientos": ["Java", "PHP", "MySql"]
+  "conocimientos": ["Oracle", "Python", "Json"]
 },
 {
-  "nombre": "Juan Pérez",
-  "edad": 30,
-  "ciudad": "Madrid",
-  "conocimientos": ["Java", "PHP", "MySql"]
+  "nombre": "Marta Marrero",
+  "edad": 31,
+  "ciudad": "Sevilla",
+  "conocimientos": ["Java", "Javascript", "Go"]
 }
 ]

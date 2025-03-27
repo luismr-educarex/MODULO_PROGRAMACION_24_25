@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Tomás",
+    "edad": 45,
+    "ciudad": "Plasencia",
+    "conocimientos": [
+      "Java",
+      "PHP",
+      "HTML"
+    ]
+  },
+  {
+    "nombre": "Marta",
+    "edad": 23,
+    "ciudad": "Sevilla",
+    "conocimientos": [
+      "Java",
+      "MySql",
+      "XML"
+    ]
+  },
+  {
+    "nombre": "Ana",
+    "edad": 40,
+    "ciudad": "Cáceres",
+    "conocimientos": [
+      "Java",
+      "Spring",
+      "Ajax"
+    ]
+  }
+]
