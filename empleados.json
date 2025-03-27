@@ -1,0 +1,19 @@
+[{
+  "nombre": "Juan Pérez",
+  "edad": 30,
+  "ciudad": "Madrid",
+  "conocimientos": ["Java", "PHP", "MySql"]
+},
+{
+  "nombre": "Juan Pérez",
+  "edad": 30,
+  "ciudad": "Madrid",
+  "conocimientos": ["Java", "PHP", "MySql"]
+},
+{
+  "nombre": "Juan Pérez",
+  "edad": 30,
+  "ciudad": "Madrid",
+  "conocimientos": ["Java", "PHP", "MySql"]
+}
+]
