@@ -63,8 +63,11 @@ public class Main {
 		
 	}
 
-	private static void eliminar() {
-		// TODO Auto-generated method stub
+	private static void eliminar() throws SQLException {
+		
+		//PEDIR LOS DATOS AL USUARIO
+		dao.delete(1);
+		System.out.println("Empleado eliminado");
 		
 	}
 

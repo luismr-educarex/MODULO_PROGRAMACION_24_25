@@ -40,7 +40,7 @@ public class EmpleadoDAO {
 		return lista;
 	}
 	
-	public void delete(Empleado empleado) throws SQLException{
+	public void delete(int id) throws SQLException{
 		
 		String sql = "DELETE FROM empleados WHERE id=?";
 	
@@ -48,7 +48,7 @@ public class EmpleadoDAO {
 				Connection con = ConexionDB.conectar();	
 				PreparedStatement stmt = con.prepareStatement(sql);			
 				){
-					stmt.setInt(1, empleado.getId());
+					stmt.setInt(1, id);
 					stmt.executeUpdate();
 				}
 	}
