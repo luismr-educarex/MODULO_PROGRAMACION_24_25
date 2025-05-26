@@ -57,14 +57,16 @@ public class EmpleadoDAO {
 	public void insertar(Empleado empleado) throws SQLException{
 			
 		String sql = "INSERT INTO empleados(nombre,puesto,salario) VALUES (?,?,?)";
-	
+		String sql2 = "INSERT INTO empleados(nombre,puesto,salario) VALUES "
+				+ "   ("+empleado.getNombre()+","+empleado.getPuesto()+","+empleado.getSalario()+")";
 		try(
 				Connection con = ConexionDB.conectar();	
 				PreparedStatement stmt = con.prepareStatement(sql);			
 				){
+					
+					stmt.setDouble(3, empleado.getSalario());
 					stmt.setString(1, empleado.getNombre());
 					stmt.setString(2, empleado.getPuesto());
-					stmt.setDouble(3, empleado.getSalario());
 					stmt.executeUpdate();
 				}
 	}
