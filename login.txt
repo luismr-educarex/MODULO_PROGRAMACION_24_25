@@ -1,7 +1,7 @@
 admin1:admin123:administrador
 admin2:admin456:administrador
 cliente01:pass01:cliente
-cliente02:pass02:cliente
+cliente02:pass02:gerente
 cliente03:pass03:cliente
 cliente04:pass04:cliente
 cliente05:pass05:cliente
