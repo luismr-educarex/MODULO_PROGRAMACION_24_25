@@ -73,6 +73,12 @@ public class Comprobante {
 	public void setImporteFinal(double importeFinal) {
 		this.importeFinal = importeFinal;
 	}
+	@Override
+	public String toString() {
+		return "Comprobante [fechaHora=" + fechaHora + ", nombreCliente=" + nombreCliente + ", tipoProducto="
+				+ tipoProducto + ", litros=" + litros + ", precioL=" + precioL + ", importeBruto=" + importeBruto
+				+ ", descuentos=" + descuentos + ", importeFinal=" + importeFinal + "]";
+	}
 	
 	
 

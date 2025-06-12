@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -15,18 +16,48 @@ public class Main {
 	
 	private static List<Usuario> usuarios = new ArrayList<Usuario>(); 
 	private static Map<String,List<Comprobante>> clientes= new HashMap<String,List<Comprobante>>();
-	private static List<Comprobante> respostajes = new ArrayList<Comprobante>();
+	private static List<Comprobante> repostajes = new ArrayList<Comprobante>();
 	private static final Scanner entrada = new Scanner(System.in);
+	private static List<Deposito> depositos = new ArrayList<Deposito>();
 	
 	
 	
 	public static void main(String[] args) {
 	
 		
+		 inicializarDepositos();
 		 leerDatosFichero();
 		 login();
 		 
 
+	}
+	
+	
+	
+
+	private static void inicializarDepositos() {
+		
+	 Deposito depositoDiesel = new Deposito(1,"diesel", 1200, 0,1.4);	
+	 Deposito depositoGasolina = new Deposito(2,"gasolina", 1000, 0,1.5); 
+	 Deposito depositoGas = new Deposito(3,"gas", 500, 0,0.8);
+	 
+	 depositos.add(depositoDiesel);
+	 depositos.add(depositoGasolina);
+	 depositos.add(depositoGas);
+		
+	}
+	
+	private static void obtenerEstadoDepositos() {
+		
+		System.out.println("----DEPOSITOS----");
+		for(Deposito deposito: depositos) {
+			System.out.println("Producto:"+deposito.getProducto());
+			System.out.println("Capacidad máxima:"+deposito.getCapacidad());
+			System.out.println("Consumo:"+deposito.getConsumo());
+			System.out.println("Disponible:"+deposito.obtenerCapacidadActual());
+			System.out.println("-----------------------");
+		}
+		
 	}
 
 	private static void login() {
@@ -101,7 +132,7 @@ public class Main {
 				  repostar(usuario.getNombre());
 				break;
 			case 2:
-				  verComprobantes();
+				  verComprobantes(usuario.getNombre());
 				break;
 			case 3:
 				 System.out.println("Gracias");
@@ -116,12 +147,28 @@ public class Main {
 		
 	}
 
-	private static void verComprobantes() {
-		// TODO Auto-generated method stub
+	private static void verComprobantes(String nombreCliente) {
+		
+		//RECORRER LA LISTA 
+		 for(Comprobante comprobante: repostajes) {
+			 
+			 if(comprobante.getNombreCliente().equals(nombreCliente)) {
+				 System.out.println(comprobante);
+			 }
+		 }
+		
+		//OBTENER LISTA DEL MAPA
+		 List<Comprobante> listaCliente =  clientes.get(nombreCliente);
+         for(Comprobante comprobante: listaCliente) {
+				 System.out.println(comprobante);
+		 }
 		
 	}
 
 	private static void repostar(String nombre) {
+		
+		
+		obtenerEstadoDepositos();
 		
 		System.out.println("--Hola "+nombre+" ¿Qué producto desea?--");
 		System.out.println("1.Diesel");
@@ -135,10 +182,39 @@ public class Main {
 			System.out.println("Litros:");
 			litros = entrada.nextDouble();
 			
+			if(litros>0) {
+
+				actualizarEstadoDeposito(tipoProducto,litros);
+				
+				String producto = Deposito.obtenerNombreTipoProducto(tipoProducto);
+				double precioL = obtenerPrecioLitroProducto(tipoProducto);
+				double importeBruto = litros*precioL;
+				double descuentoCantidad = obtenerDescuentoPorCantidad(importeBruto);
+				double descuentoPorProducto = obtenerDescuentoPorTipoProducto(tipoProducto,importeBruto);
+				double penalizacion =  obtenerPenalizacion(tipoProducto,importeBruto);
+				double importeTotal = importeBruto - descuentoCantidad - descuentoPorProducto + penalizacion;
+				
+				Comprobante comprobante = new Comprobante(LocalDateTime.now(),
+						                                  nombre, 
+						                                  producto, 
+						                                  litros, 
+						                                  precioL, 
+						                                  importeBruto, 
+						                                  descuentoCantidad+descuentoPorProducto,
+						                                  importeTotal
+						                                  );
+				
+				repostajes.add(comprobante);
+				
+				clientes.get(nombre).add(comprobante);
+				
+				
+			}else {
+				System.out.println("La cantidad de litros debe ser mayor a 0");
+			}
 			
+			obtenerEstadoDepositos();
 			
-			
-			Comprobante comprobante = new Comprobante(null, nombre, nombre, litros, litros, litros, tipoProducto, litros);
 			
 			
 			
@@ -148,6 +224,88 @@ public class Main {
 		}
 		
 	}
+
+	
+
+
+
+
+	private static double obtenerPenalizacion(int tipoProducto, double importeBruto) {
+		   double penalizacion= 0;
+		  
+		  if(tipoProducto==Constantes.ID_DIESEL) {
+			  penalizacion = importeBruto*Constantes.PENALIZACION_DIESEL;
+		  }
+		  
+		  return penalizacion;
+	}
+
+
+
+
+	private static double obtenerDescuentoPorTipoProducto(int tipoProducto, double importeBruto) {
+		
+		  double descuento= 0;
+		  
+		  if(tipoProducto==Constantes.ID_GAS) {
+			  descuento = importeBruto*Constantes.DESCUENTO_GAS;
+		  }
+		  
+		  return descuento;
+		
+	}
+
+
+
+
+	private static double obtenerDescuentoPorCantidad(double importeBruto) {
+		
+	    double descuento = 0;
+		
+	    if(importeBruto>=Constantes.LIMITE_DESCUENTO) {
+	    	descuento = importeBruto*Constantes.DESCUENTO_CANTIDAD;
+	    }
+		
+		return descuento;
+	}
+
+
+
+
+	private static double obtenerPrecioLitroProducto(int tipoProducto) {
+	
+		double precioL=0;
+		
+		for(Deposito deposito: depositos) {
+			if(deposito.getId()==tipoProducto) {
+				precioL = deposito.getPrecio();
+				
+			}
+		}
+		return precioL;
+		
+	}
+
+
+
+
+	private static void actualizarEstadoDeposito(int tipoProducto, double litros) {
+		
+		
+		for(Deposito deposito: depositos) {
+			if(deposito.getId()==tipoProducto) {
+				if(deposito.obtenerCapacidadActual()>=litros) {
+					deposito.setConsumo(deposito.getConsumo()+litros);
+				}else {
+					System.out.println("No hay litros suficientes del producto seleccionado");
+				}
+				
+			}
+		}
+	}
+
+
+
 
 	private static void mostrarMenuAdministrador() {
 		
